@@ -1,3 +1,13 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+ 
+namespace :api, :defaults => { :format => :json } do
+    namespace :v1 do
+   
+      get "/students/:id" => "students#show", :as => :student
+      get "/teachets" => "teachers#index", :as => :teachers
+      delete "/teachers/:id" => "teachers#destroy", :as => :destroy_teacher
+   
+    end
+  end
+
 end
