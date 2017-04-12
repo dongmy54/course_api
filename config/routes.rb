@@ -4,7 +4,7 @@ namespace :api, :defaults => { :format => :json } do
     namespace :v1 do
    
       get "/students/:id" => "students#show", :as => :student
-      get "/teachets" => "teachers#index", :as => :teachers
+      get "/teachers" => "teachers#index", :as => :teachers
       delete "/teachers/:id" => "teachers#destroy", :as => :destroy_teacher
    
     end
